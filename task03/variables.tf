@@ -1,36 +1,6 @@
-variable "prefix" {
-  type        = string
-  description = "Prefix used for project"
-}
-
-variable "suffix_rg" {
-  type        = string
-  description = "Suffix used for Resource Group"
-}
-
-variable "suffix_vnet" {
-  type        = string
-  description = "Suffix used for Virtual Nets"
-}
-
-variable "suffix_storage" {
-  type        = string
-  description = "Suffix used for Storage"
-}
-
 variable "subnet_name" {
   type        = list(string)
   description = "Name of the subnets"
-}
-
-variable "project_code" {
-  type        = string
-  description = "Unique project code"
-}
-
-variable "project_code_short" {
-  type        = string
-  description = "Short version of project code"
 }
 
 variable "vnet_address_space" {
@@ -56,4 +26,19 @@ variable "location" {
 variable "tag" {
   type        = string
   description = "The tag to be assigned to all resources"
+}
+
+variable "resource_group_name" {
+  type        = string
+  description = "Name of the resource group"
+}
+
+variable "storage_account_name" {
+  type        = string
+  description = "Name of the storage account"
+}
+
+variable "vnet_name" {
+  type        = string
+  description = "Name of the virtual network"
 }

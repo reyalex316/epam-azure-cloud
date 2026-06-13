@@ -1,11 +1,11 @@
 resource "azurerm_resource_group" "rg_name" {
-  name     = "${var.prefix}-${var.project_code}-${var.suffix_rg}"
+  name     = var.resource_group_name
   location = var.location
   tags     = { Creator = "${var.tag}" }
 }
 
 resource "azurerm_storage_account" "storage_name" {
-  name                     = "${var.prefix}${var.project_code_short}${var.suffix_storage}"
+  name                     = var.storage_account_name
   resource_group_name      = azurerm_resource_group.rg_name.name
   location                 = azurerm_resource_group.rg_name.location
   account_tier             = "Standard"
@@ -14,7 +14,7 @@ resource "azurerm_storage_account" "storage_name" {
 }
 
 resource "azurerm_virtual_network" "vnet_name" {
-  name                = "${var.prefix}-${var.project_code}-${var.suffix_vnet}"
+  name                = var.vnet_name
   location            = azurerm_resource_group.rg_name.location
   resource_group_name = azurerm_resource_group.rg_name.name
   address_space       = var.vnet_address_space

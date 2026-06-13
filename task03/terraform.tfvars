@@ -1,12 +1,9 @@
-prefix                 = "cmaz"
-suffix_rg              = "rg"
-suffix_vnet            = "vnet"
-suffix_storage         = "sa"
+resource_group_name = "cmaz-ph0p7o3b-mod3-rg"
+storage_account_name = "cmazph0p7o3bsa"
+vnet_name = "cmaz-ph0p7o3b-mod3-vnet"
 subnet_name            = ["frontend", "backend"]
 vnet_address_space     = ["10.0.0.0/16"]
 subnet1_address_prefix = ["10.0.1.0/24"]
 subnet2_address_prefix = ["10.0.2.0/24"]
-project_code           = "ph0p7o3b-mod3"
-project_code_short     = "ph0p7o3b"
 location               = "eastus"
 tag                    = "alejandro_villarreal@epam.com"
