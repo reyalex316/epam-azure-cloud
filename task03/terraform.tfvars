@@ -1,6 +1,6 @@
-resource_group_name = "cmaz-ph0p7o3b-mod3-rg"
-storage_account_name = "cmazph0p7o3bsa"
-vnet_name = "cmaz-ph0p7o3b-mod3-vnet"
+resource_group_name    = "cmaz-ph0p7o3b-mod3-rg"
+storage_account_name   = "cmazph0p7o3bsa"
+vnet_name              = "cmaz-ph0p7o3b-mod3-vnet"
 subnet_name            = ["frontend", "backend"]
 vnet_address_space     = ["10.0.0.0/16"]
 subnet1_address_prefix = ["10.0.1.0/24"]
