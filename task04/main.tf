@@ -23,7 +23,8 @@ resource "azurerm_public_ip" "public_ip_name" {
   name                = var.public_ip_name
   location            = azurerm_resource_group.rg_name.location
   resource_group_name = azurerm_resource_group.rg_name.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
   domain_name_label   = var.dns_label
   tags                = { Creator = "${var.tag}" }
 }
