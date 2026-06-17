@@ -87,7 +87,7 @@ resource "azurerm_linux_virtual_machine" "lin_vm" {
   location              = azurerm_resource_group.rg_name.location
   resource_group_name   = azurerm_resource_group.rg_name.name
   network_interface_ids = [azurerm_network_interface.nic_name.id]
-  size                  = "B2als_v2"
+  size                  = "Standard_B2s_v2"
   os_disk {
     name                 = var.os_disk_name
     caching              = "ReadWrite"
