@@ -1,0 +1,17 @@
+rg_name               = "cmaz-ph0p7o3b-mod4-rg"
+vnet_name             = "cmaz-ph0p7o3b-mod4-vnet"
+subnet_name           = "frontend"
+nic_name              = "cmaz-ph0p7o3b-mod4-nic"
+nsg_name              = "cmaz-ph0p7o3b-mod4-nsg"
+nsg_name_http         = "AllowHTTP"
+nsg_name_ssh          = "AllowSSH"
+public_ip_name        = "cmaz-ph0p7o3b-mod4-pip"
+vm_name               = "cmaz-ph0p7o3b-mod4-vm"
+vnet_address_space    = ["10.0.0.0/16"]
+subnet_address_prefix = ["10.0.1.0/24"]
+nic_ip_config         = "internal"
+vm_admin              = "alexadmin"
+os_disk_name          = "osdisk01"
+dns_label             = "cmaz-ph0p7o3b-mod4-nginx"
+location              = "eastus"
+tag                   = "alejandro_villarreal@epam.com"
