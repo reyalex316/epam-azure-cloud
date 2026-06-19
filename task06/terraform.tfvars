@@ -1,5 +1,5 @@
 name_prefix             = "cmaz-ph0p7o3b-mod6"
-location                = "westeurope"
+location                = "southindia"
 key_vault_name          = "cmaz-ph0p7o3b-mod6-kv"
 key_vault_rg_name       = "cmaz-ph0p7o3b-mod6-kv-rg"
 sql_admin_username      = "sqladmin"
