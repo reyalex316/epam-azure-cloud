@@ -1,11 +1,11 @@
 import {
   to = azurerm_resource_group.main
-  id = "/subscriptions/8b2a01d6-1999-4495-aff1-1ccc43f48752/resourceGroups/cmtr-ph0p7o3b-mod7-rg"
+  id = "/subscriptions/afca76e1-8370-4362-a06b-13672e9a2e52/resourceGroups/cmtr-ph0p7o3b-mod7-rg"
 }
 
 import {
   to = azurerm_storage_account.main
-  id = "/subscriptions/8b2a01d6-1999-4495-aff1-1ccc43f48752/resourceGroups/cmtr-ph0p7o3b-mod7-rg/providers/Microsoft.Storage/storageAccounts/cmtrph0p7o3bmod7"
+  id = "/subscriptions/afca76e1-8370-4362-a06b-13672e9a2e52/resourceGroups/cmtr-ph0p7o3b-mod7-rg/providers/Microsoft.Storage/storageAccounts/cmtrph0p7o3bmod7sa"
 }
 
 resource "azurerm_resource_group" "main" {
