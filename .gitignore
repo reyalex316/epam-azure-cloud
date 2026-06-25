@@ -5,3 +5,4 @@ terraform.tfstate
 terraform.tfstate.backup
 *.tfplan
 .vscode/
+.terraform.tfstate.lock.info
