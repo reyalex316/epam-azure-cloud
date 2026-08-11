@@ -19,7 +19,7 @@ module "keyvault" {
 
 module "redis" {
   source                     = "./modules/redis"
-  redis_name                 = local.redis_name
+  redis_name                 = var.redis_name
   resource_group_name        = azurerm_resource_group.main.name
   location                   = azurerm_resource_group.main.location
   capacity                   = var.redis_capacity

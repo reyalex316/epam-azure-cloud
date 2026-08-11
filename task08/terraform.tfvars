@@ -7,6 +7,7 @@ redis_capacity             = 2
 redis_sku                  = "Basic"
 redis_family               = "C"
 kv_sku                     = "standard"
+redis_name                 = "cmtr-ph0p7o3b-1786485823-mod8-redis"
 redis_secret_key_name      = "redis-primary-key"
 redis_secret_hostname_name = "redis-hostname"
 aci_sku                    = "Standard"
