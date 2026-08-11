@@ -32,3 +32,8 @@ variable "tags" {
   type        = map(string)
   description = "Tags applied to all resources"
 }
+
+variable "blob_container_name" {
+  type        = string
+  description = "Name of the container where the blob is"
+}

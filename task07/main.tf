@@ -36,5 +36,6 @@ module "cdn" {
   fd_route_name        = local.fd_route_name
   fd_sku               = var.fd_sku
   storage_blob_host    = azurerm_storage_account.main.primary_blob_host
+  blob_container_name  = var.blob_container_name
   tags                 = var.tags
 }

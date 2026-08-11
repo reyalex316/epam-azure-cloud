@@ -38,6 +38,11 @@ variable "storage_blob_host" {
   description = "Primary blob host of the Storage Account used as CDN origin"
 }
 
+variable "blob_container_name" {
+  type        = string
+  description = "Name of the container where the blob is"
+}
+
 variable "tags" {
   type        = map(string)
   description = "Tags applied to Front Door resources"

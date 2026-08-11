@@ -44,10 +44,11 @@ resource "azurerm_cdn_frontdoor_route" "main" {
   cdn_frontdoor_endpoint_id     = azurerm_cdn_frontdoor_endpoint.main.id
   cdn_frontdoor_origin_group_id = azurerm_cdn_frontdoor_origin_group.main.id
   cdn_frontdoor_origin_ids      = [azurerm_cdn_frontdoor_origin.main.id]
-  link_to_default_domain        = "true"
+  link_to_default_domain        = true
   enabled                       = true
   forwarding_protocol           = "HttpsOnly"
   https_redirect_enabled        = true
   patterns_to_match             = ["/*"]
   supported_protocols           = ["Http", "Https"]
+  cdn_frontdoor_origin_path     = "/${var.blob_container_name}"
 }
