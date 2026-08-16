@@ -19,7 +19,10 @@ resource "azurerm_container_registry_task" "main" {
     dockerfile_path      = "Dockerfile"
     context_path         = var.git_repo_url
     context_access_token = var.git_pat
-    image_names          = ["${var.app_image_name}:{{.Run.ID}}"]
+    image_names = [
+      "${var.app_image_name}:{{.Run.ID}}",
+      "${var.app_image_name}:latest"
+    ]
   }
 }
 
