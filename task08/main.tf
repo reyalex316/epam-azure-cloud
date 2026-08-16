@@ -102,7 +102,7 @@ resource "kubectl_manifest" "deployment" {
   timeouts {
     create = "20m"
   }
-  
+
   wait_for {
     field {
       key   = "status.availableReplicas"
