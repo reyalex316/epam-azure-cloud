@@ -39,6 +39,11 @@ variable "redis_name" {
   description = "Name of the Redis ACI instance"
 }
 
+variable "unique_id" {
+  type        = string
+  description = "Unique identifier used in Redis name"
+}
+
 variable "redis_capacity" {
   type        = number
   description = "Capacity of the Redis Cache instance"
