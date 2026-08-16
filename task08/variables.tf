@@ -34,11 +34,6 @@ variable "acr_sku" {
   description = "SKU of the Azure Container Registry"
 }
 
-variable "redis_name" {
-  type        = string
-  description = "Name of the Redis ACI instance"
-}
-
 variable "unique_id" {
   type        = string
   description = "Unique identifier used in Redis name"
