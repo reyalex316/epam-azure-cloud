@@ -99,6 +99,10 @@ resource "kubectl_manifest" "deployment" {
     image_tag        = "latest"
   })
 
+  timeouts {
+    create = "20m"
+  }
+  
   wait_for {
     field {
       key   = "status.availableReplicas"
