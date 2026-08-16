@@ -6,10 +6,11 @@ resource "azurerm_kubernetes_cluster" "main" {
   tags                = var.tags
 
   default_node_pool {
-    name         = var.node_pool_name
-    node_count   = var.node_count
-    vm_size      = var.node_size
-    os_disk_type = var.os_disk_type
+    name            = var.node_pool_name
+    node_count      = var.node_count
+    vm_size         = var.node_size
+    os_disk_type    = var.os_disk_type
+    os_disk_size_gb = 75
   }
 
   identity {
