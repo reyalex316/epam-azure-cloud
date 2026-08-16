@@ -1,7 +1,7 @@
 name_prefix                = "cmtr-ph0p7o3b-mod8"
 location                   = "eastus"
 app_image_name             = "cmtr-ph0p7o3b-mod8-app"
-git_repo_url               = "https://github.com/reyalex316/epam-azure-cloud"
+git_repo_url               = "https://github.com/reyalex316/epam-azure-cloud#main:task08/application"
 acr_sku                    = "Basic"
 redis_capacity             = 2
 redis_sku                  = "Basic"
