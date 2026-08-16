@@ -13,12 +13,6 @@ variable "tags" {
   description = "Tags applied to all resources"
 }
 
-variable "git_pat" {
-  type        = string
-  sensitive   = true
-  description = "Personal Access Token for the Git repository"
-}
-
 variable "acr_sku" {
   type        = string
   description = "SKU of the Azure Container Registry"
