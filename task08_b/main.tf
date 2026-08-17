@@ -101,5 +101,5 @@ module "k8s" {
   redis_password_secret_name = var.redis_secret_password_name
   k8s_manifests_path         = "${path.module}/k8s-manifests"
 
-  depends_on = [module.aks, module.acr, module.aci_redis]
+  depends_on = [module.aks, module.acr, module.aci_redis, module.keyvault]
 }
