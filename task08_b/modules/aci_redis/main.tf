@@ -16,7 +16,7 @@ resource "azurerm_container_group" "redis" {
 
   container {
     name   = "redis"
-    image  = "mcr.microsoft.com/mirror/docker/library/redis:latest"
+    image  = "mcr.microsoft.com/oss/bitnami/redis:latest"
     cpu    = "0.5"
     memory = "1.5"
 
