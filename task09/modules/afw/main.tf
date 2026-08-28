@@ -46,6 +46,12 @@ resource "azurerm_route_table" "main" {
     next_hop_type          = "VirtualAppliance"
     next_hop_in_ip_address = azurerm_firewall.main.ip_configuration[0].private_ip_address
   }
+
+  route {
+    name           = format("%s-%s", var.name_prefix, "route-lb-exception")
+    address_prefix = "${var.aks_loadbalancer_ip}/32"
+    next_hop_type  = "Internet"
+  }
 }
 
 resource "azurerm_subnet_route_table_association" "aks" {
