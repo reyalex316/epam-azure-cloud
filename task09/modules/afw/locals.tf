@@ -7,7 +7,6 @@ locals {
   nat_collection_name = format("%s-%s", var.name_prefix, "nat-collection")
   net_collection_name = format("%s-%s", var.name_prefix, "net-collection")
   app_collection_name = format("%s-%s", var.name_prefix, "app-collection")
-  nsg_rule_name       = format("%s-%s", var.name_prefix, "allow-fw-to-lb")
 
   nat_rules = [
     {
