@@ -52,3 +52,8 @@ variable "tags" {
   type        = map(string)
   description = "Tags applied to all resources"
 }
+
+variable "aks_cluster_name" {
+  type        = string
+  description = "Name of the existing AKS cluster"
+}
