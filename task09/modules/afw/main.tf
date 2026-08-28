@@ -129,7 +129,7 @@ data "azurerm_resources" "aks_nsg" {
 }
 
 resource "azurerm_network_security_rule" "allow_firewall_to_lb" {
-  name                        = "AllowAccessFromFirewallPublicIPToLoadBalancerIP"
+  name                        = local.nsg_rule_name
   priority                    = 400
   direction                   = "Inbound"
   access                      = "Allow"
