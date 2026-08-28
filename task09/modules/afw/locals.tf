@@ -15,7 +15,7 @@ locals {
       protocols          = ["TCP"]
       source_addresses   = ["*"]
       destination_ports  = ["80"]
-      translated_address = data.azurerm_lb.aks.private_ip_address
+      translated_address = var.aks_loadbalancer_ip
       translated_port    = "80"
     }
   ]
