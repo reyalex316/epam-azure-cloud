@@ -15,40 +15,16 @@ locals {
       protocols          = ["TCP"]
       source_addresses   = ["*"]
       destination_ports  = ["80"]
-      translated_address = var.aks_loadbalancer_ip
+      translated_address = data.azurerm_lb.aks.private_ip_address
       translated_port    = "80"
     }
   ]
 
   network_rules = [
-    {
-      name                  = "allow-dns"
-      protocols             = ["UDP", "TCP"]
-      source_addresses      = ["10.0.0.0/24"]
-      destination_addresses = ["*"]
-      destination_ports     = ["53"]
-    },
-    {
-      name                  = "allow-ntp"
-      protocols             = ["UDP"]
-      source_addresses      = ["10.0.0.0/24"]
-      destination_addresses = ["*"]
-      destination_ports     = ["123"]
-    },
-    {
-      name                  = "allow-https-outbound"
-      protocols             = ["TCP"]
-      source_addresses      = ["10.0.0.0/24"]
-      destination_addresses = ["*"]
-      destination_ports     = ["443"]
-    },
-    {
-      name                  = "allow-http-outbound"
-      protocols             = ["TCP"]
-      source_addresses      = ["10.0.0.0/24"]
-      destination_addresses = ["*"]
-      destination_ports     = ["80"]
-    }
+    { name = "allow-dns", protocols = ["UDP", "TCP"], source_addresses = ["10.0.0.0/24"], destination_addresses = ["*"], destination_ports = ["53"] },
+    { name = "allow-ntp", protocols = ["UDP"], source_addresses = ["10.0.0.0/24"], destination_addresses = ["*"], destination_ports = ["123"] },
+    { name = "allow-https-outbound", protocols = ["TCP"], source_addresses = ["10.0.0.0/24"], destination_addresses = ["*"], destination_ports = ["443"] },
+    { name = "allow-http-outbound", protocols = ["TCP"], source_addresses = ["10.0.0.0/24"], destination_addresses = ["*"], destination_ports = ["80"] }
   ]
 
   app_rules = [

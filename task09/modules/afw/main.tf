@@ -134,6 +134,11 @@ data "azurerm_resources" "aks_nsg" {
   type                = "Microsoft.Network/networkSecurityGroups"
 }
 
+data "azurerm_lb" "aks" {
+  name                = "kubernetes"
+  resource_group_name = data.azurerm_kubernetes_cluster.main.node_resource_group
+}
+
 resource "azurerm_network_security_rule" "allow_firewall_to_lb" {
   name                        = local.nsg_rule_name
   priority                    = 400
